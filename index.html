@@ -260,9 +260,39 @@ nav button.active { background:var(--green); color:#fff; }
 /* FOOTER */
 footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color:var(--muted); font-size:.84rem; }
 
-@media(max-width:680px) {
-  .phases-row { grid-template-columns:repeat(2,1fr); }
+/* ── MOBILE ── */
+@media(max-width:700px) {
+  header { padding:0 1rem; }
   nav { display:none; }
+  .hero { padding:2.5rem 1.2rem 2rem; }
+  .hero h1 { font-size:1.7rem; }
+  .hero p { font-size:.9rem; }
+  .hero-stats { gap:1.2rem; }
+  .stat-num { font-size:1.8rem; }
+  .stat-label { font-size:.65rem; }
+  .methodes-section { padding:2rem 1rem; }
+  .methodes-grid { grid-template-columns:1fr; }
+  .section { padding:1.5rem 1rem; }
+  .tab-btn { padding:.6rem .9rem; font-size:.8rem; }
+  .phases-row { grid-template-columns:repeat(2,1fr); }
+  .semaine-header { padding:.9rem 1rem; }
+  .semaine-name { font-size:.88rem; }
+  .semaine-badge { font-size:.7rem; padding:3px 8px; }
+  .dots5 { display:none; }
+  .seances-grid { grid-template-columns:1fr !important; }
+  .seance-card { padding:1.1rem; }
+  .seance-titre { font-size:.95rem; }
+  .steps li { font-size:.8rem; }
+  .var-grid { grid-template-columns:1fr; }
+  .sys-grid { grid-template-columns:1fr 1fr; }
+  .visu-card { padding:1rem; }
+  .varbox { padding:1rem; }
+  footer { padding:1.5rem 1rem; font-size:.78rem; }
+}
+@media(max-width:400px) {
+  .phases-row { grid-template-columns:1fr 1fr; gap:6px; }
+  .phase-title { font-size:.8rem; }
+  .sys-grid { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -381,17 +411,17 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
   <div class="programme-wrapper visible" id="phase-1">
     <div class="cnote">
       <strong>Phase 1 — Bruit dans le cerveau</strong>
-      On perturbe le système nerveux par des contraintes imposées de l'extérieur. L'objectif n'est pas la technique parfaite — c'est la plasticité motrice. Gaucher, une main, distances extrêmes, partenaires multiples, rythmes cassés : le cerveau doit s'adapter en permanence. Ce bruit intentionnel crée des nouvelles connexions neuronales.
+      On perturbe le système nerveux par des contraintes extérieures. Chaque semaine, le niveau de chaos augmente : semaine 1 = une contrainte à la fois / semaine 2 = deux simultanément / semaine 3 = le partenaire impose tout. Le volume augmente aussi : 30 → 50 → 80 reps.
     </div>
     <div class="semaine-list">
 
-      <!-- S1 -->
+      <!-- S1 — 1 contrainte / volume modéré -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S1</div>
-            <div><div class="semaine-name">Contraintes imposées — tout perturber</div>
-            <div class="semaine-meta">Phase 1 · Perturbation motrice · 3 séances</div></div>
+            <div><div class="semaine-name">Découverte — 1 contrainte à la fois</div>
+            <div class="semaine-meta">Phase 1 · Volume 30-40 reps · Système 2×2 min</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di"></div><div class="di"></div><div class="di"></div><div class="di"></div></div>
@@ -399,171 +429,72 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
           </div>
         </div>
         <div class="seances-grid">
-
           <div class="seance-card">
             <div class="seance-day">Séance 1</div>
-            <div class="seance-titre">Gaucher + 1 main</div>
-            <span class="tbadge tp">Perturbation</span>
-            <div class="sbloc warmup">
-              <div class="sbloc-title">Échauffement — 10 min</div>
-              <ul class="steps">
-                <li>Déplacements libres — pas de schéma imposé</li>
-                <li>5 uchi-komi normaux : noter ce qui est automatique</li>
-                <li>Rotations articulaires, mobilité hanches</li>
-              </ul>
-            </div>
+            <div class="seance-titre">Gaucher & 1 main — séparément</div>
+            <span class="tbadge tp">Contrainte unique</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Contraintes — 25 min</div>
+              <div class="sbloc-title">Uchi-komi 30 reps — 20 min</div>
               <ul class="steps">
-                <li><strong>× 20 uchi-komi en gaucher</strong> — technique côté non-dominant, intégrale</li>
-                <li><strong>× 20 avec une seule main</strong> — main de ceinture retirée, adapter l'entrée</li>
-                <li><strong>× 10 gaucher + une main</strong> — chaos maximum</li>
-                <li>Après chaque série : revenir en normal × 5, observer le changement de sensation</li>
+                <li><strong>× 10 en gaucher</strong> — technique côté non-dominant, complète</li>
+                <li><strong>× 10 une seule main</strong> — main de ceinture retirée, trouver l'équilibre</li>
+                <li><strong>× 10 normal</strong> — noter ce qui a changé dans les sensations</li>
+                <li>Une contrainte à la fois : le cerveau identifie l'effet de chacune</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 10 min</div>
-              <ul class="steps">
-                <li>Randori 3 × 2 min — <strong>1 seule main autorisée</strong> pendant 1 min puis normal</li>
-                <li>Observer ce que le corps invente pour compenser</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 2×2 min</div>
+              <ul class="steps"><li>Randori avec 1 seule main — observer ce que le corps invente</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 40 min</div>
           </div>
-
           <div class="seance-card">
             <div class="seance-day">Séance 2</div>
-            <div class="seance-titre">Distances extrêmes</div>
-            <span class="tbadge tp">Perturbation</span>
+            <div class="seance-titre">Distances extrêmes — séparément</div>
+            <span class="tbadge tp">Contrainte unique</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Contraintes distance — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 30 reps — 20 min</div>
               <ul class="steps">
-                <li><strong>× 15 de très loin</strong> — grand pas, entrée maximale</li>
-                <li><strong>× 15 collé</strong> — corps à corps, distance zéro</li>
-                <li><strong>× 10 partenaire dos au mur</strong> — trouver l'angle dans l'espace restreint</li>
-                <li><strong>× 10 partenaire en mouvement</strong> — s'aligner en marchant avec lui sans s'arrêter</li>
-                <li>Chaque changement de distance = nouveau problème moteur à résoudre</li>
+                <li><strong>× 10 de très loin</strong> — grand pas maximal, entrer dans la longueur</li>
+                <li><strong>× 10 collé</strong> — corps à corps, distance zéro</li>
+                <li><strong>× 10 partenaire dos au mur</strong> — espace restreint, trouver l'angle</li>
+                <li>Une seule variable change à la fois</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori : se coller intentionnellement — travailler la distance courte imposée</li>
-                <li>Puis randori grand périmètre — attaquer de loin</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 2×2 min</div>
+              <ul class="steps"><li>Randori distance courte imposée — rester collé toute la durée</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 40 min</div>
           </div>
-
           <div class="seance-card">
             <div class="seance-day">Séance 3</div>
-            <div class="seance-titre">Rythme cassé + Partenaires multiples</div>
-            <span class="tbadge tp">Perturbation</span>
+            <div class="seance-titre">Rythmes cassés — séparément</div>
+            <span class="tbadge tp">Contrainte unique</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Contraintes rythme & partenaires — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 30 reps — 20 min</div>
               <ul class="steps">
-                <li><strong>× 10 ultra-lent</strong> (5 sec par rep) — sentir chaque phase du mouvement</li>
-                <li><strong>× 10 faux départ</strong> — commencer, stopper net, repartir</li>
-                <li><strong>× 10 lent → explosion</strong> — feinte de vitesse, déception</li>
-                <li>Changer de partenaire toutes les <strong>5 reps</strong> — s'adapter à chaque morphologie</li>
-                <li><strong>Yeux mi-clos</strong> × 10 reps — amplifie l'information tactile, réduit le visuel</li>
+                <li><strong>× 10 ultra-lent</strong> — 4 secondes par rep, sentir chaque phase</li>
+                <li><strong>× 10 faux départ</strong> — commencer, stopper net à mi-chemin, repartir</li>
+                <li><strong>× 10 explosif pur</strong> — le plus vite possible</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori avec partenaire qui change de style toutes les 30 sec : rigide / souple / agressif</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 2×2 min</div>
+              <ul class="steps"><li>Randori rythme cassé — alterner lent/explosif délibérément toutes les 20 sec</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 40 min</div>
           </div>
-
         </div>
       </div>
 
-      <!-- S2 -->
+      <!-- S2 — 2 contraintes / volume augmenté -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S2</div>
-            <div><div class="semaine-name">Bruit sensoriel — perturber les repères profonds</div>
-            <div class="semaine-meta">Phase 1 · Perturbation avancée · 3 séances</div></div>
-          </div>
-          <div class="semaine-right">
-            <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di"></div><div class="di"></div><div class="di"></div></div>
-            <div class="chevron">▼</div>
-          </div>
-        </div>
-        <div class="seances-grid">
-          <div class="seance-card">
-            <div class="seance-day">Séance 4</div>
-            <div class="seance-titre">Prise perturbée</div>
-            <span class="tbadge tp">Perturbation</span>
-            <div class="sbloc bern">
-              <div class="sbloc-title">Contraintes de prise — 30 min</div>
-              <ul class="steps">
-                <li><strong>Prise inversée</strong> : manche avec la main de ceinture et inversement × 15</li>
-                <li><strong>Prise croisée</strong> × 15 — dos déstabilisé, trouver une autre mécanique</li>
-                <li><strong>Prise haute uniquement</strong> (nuque / dos) × 10</li>
-                <li><strong>En reculant</strong> — attaquer en reculant × 15</li>
-                <li>Objectif : le cerveau perd ses automatismes de prise → nouvelles solutions émergent</li>
-              </ul>
-            </div>
-            <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori : partenaire refuse ta prise habituelle — trouver une alternative en 3 secondes</li>
-              </ul>
-            </div>
-            <div class="seance-footer">⏱ 50 min</div>
-          </div>
-          <div class="seance-card">
-            <div class="seance-day">Séance 5</div>
-            <div class="seance-titre">Contraintes combinées</div>
-            <span class="tbadge tp">Perturbation</span>
-            <div class="sbloc bern">
-              <div class="sbloc-title">Chaos maîtrisé — 30 min</div>
-              <ul class="steps">
-                <li><strong>Gaucher + collé</strong> × 10</li>
-                <li><strong>1 main + partenaire en mouvement</strong> × 10</li>
-                <li><strong>Prise croisée + distance longue</strong> × 10</li>
-                <li><strong>Yeux mi-clos + partenaire résistant à 70%</strong> × 10</li>
-                <li>Chaque combinaison est un problème unique : le corps doit inventer une solution</li>
-              </ul>
-            </div>
-            <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori 5 min : contrainte différente chaque échange — noter mentalement ce qui émerge naturellement sous pression</li>
-              </ul>
-            </div>
-            <div class="seance-footer">⏱ 50 min</div>
-          </div>
-          <div class="seance-card">
-            <div class="seance-day">Séance 6</div>
-            <div class="seance-titre">Gaucher en randori complet</div>
-            <span class="tbadge tp">Perturbation</span>
-            <div class="sbloc bern">
-              <div class="sbloc-title">Randori gaucher intégral — 30 min</div>
-              <ul class="steps">
-                <li>4 × 3 min en gaucher complet — aucune technique droitier autorisée</li>
-                <li>L'inconfort est voulu : le cerveau crée de nouvelles voies neuronales</li>
-                <li>Après : 2 × 3 min en droitier — observer ce qui a changé dans les sensations</li>
-                <li>Souvent : le côté dominant semble plus libre après le gaucher</li>
-              </ul>
-            </div>
-            <div class="seance-footer">⏱ 50 min</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- S3 -->
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="tog(this)">
-          <div class="semaine-left">
-            <div class="semaine-badge">S3</div>
-            <div><div class="semaine-name">Bilan Phase 1 — ce qui a émergé du chaos</div>
-            <div class="semaine-meta">Phase 1 · Consolidation · 3 séances</div></div>
+            <div><div class="semaine-name">Amplification — 2 contraintes simultanées</div>
+            <div class="semaine-meta">Phase 1 · Volume 50-60 reps · Système 3×3 min</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div><div class="di"></div></div>
@@ -572,66 +503,132 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         </div>
         <div class="seances-grid">
           <div class="seance-card">
-            <div class="seance-day">Séance 7</div>
-            <div class="seance-titre">Toutes les contraintes à la fois</div>
-            <span class="tbadge tp">Perturbation max</span>
+            <div class="seance-day">Séance 4</div>
+            <div class="seance-titre">Gaucher + collé simultanément</div>
+            <span class="tbadge tp">Double contrainte</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">100 uchi-komi chaos — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 50 reps — 25 min</div>
               <ul class="steps">
-                <li>Le partenaire choisit en secret : distance / résistance / position avant chaque rep</li>
-                <li>Tu t'adaptes sans savoir à l'avance — réaction pure</li>
-                <li>C'est le test de tout ce que le cerveau a appris en 2 semaines</li>
+                <li><strong>× 20 gaucher + distance collée</strong> — 2 perturbations en même temps</li>
+                <li><strong>× 20 1 main + partenaire en mouvement</strong> — adapter l'entrée au déplacement adverse avec un seul bras</li>
+                <li><strong>× 10 normal</strong> — mesurer l'effet des 2 semaines sur le geste habituel</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 15 min</div>
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori : gaucher la 1re min, normal les 2 suivantes — chaque échange</li></ul>
+            </div>
+            <div class="seance-footer">⏱ 50 min</div>
+          </div>
+          <div class="seance-card">
+            <div class="seance-day">Séance 5</div>
+            <div class="seance-titre">Prise perturbée + partenaires multiples</div>
+            <span class="tbadge tp">Double contrainte</span>
+            <div class="sbloc bern">
+              <div class="sbloc-title">Uchi-komi 50 reps — 25 min</div>
               <ul class="steps">
-                <li>Randori libre — après 2 semaines de perturbation, observer ce que le corps fait naturellement</li>
-                <li>Quelle technique est sortie sans décision consciente ?</li>
+                <li><strong>× 15 prise inversée</strong> (manche ↔ ceinture) + changer de partenaire toutes les 5 reps</li>
+                <li><strong>× 15 prise croisée</strong> + partenaire plus grand ou plus petit</li>
+                <li><strong>× 20 prise haute</strong> (nuque/dos) + partenaire en résistance légère (40%)</li>
               </ul>
+            </div>
+            <div class="sbloc sys">
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Rotation rapide : 1 min par partenaire × 3 — adapter immédiatement</li></ul>
+            </div>
+            <div class="seance-footer">⏱ 50 min</div>
+          </div>
+          <div class="seance-card">
+            <div class="seance-day">Séance 6</div>
+            <div class="seance-titre">Yeux mi-clos + résistance variable</div>
+            <span class="tbadge tp">Double contrainte</span>
+            <div class="sbloc bern">
+              <div class="sbloc-title">Uchi-komi 50 reps — 25 min</div>
+              <ul class="steps">
+                <li><strong>× 20 yeux mi-clos</strong> + partenaire choisit sa résistance (0% ou 70%) en secret</li>
+                <li><strong>× 20 en reculant</strong> + partenaire en mouvement continu</li>
+                <li><strong>× 10 gaucher + yeux mi-clos</strong> — bruit sensoriel maximal</li>
+              </ul>
+            </div>
+            <div class="sbloc sys">
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori : partenaire change de style toutes les 30 sec (rigide / souple / agressif)</li></ul>
+            </div>
+            <div class="seance-footer">⏱ 50 min</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S3 — partenaire impose tout / volume max -->
+      <div class="semaine-item">
+        <div class="semaine-header" onclick="tog(this)">
+          <div class="semaine-left">
+            <div class="semaine-badge">S3</div>
+            <div><div class="semaine-name">Chaos maximal — le partenaire décide tout</div>
+            <div class="semaine-meta">Phase 1 · Volume 80 reps · Système 4×3 min · Bilan</div></div>
+          </div>
+          <div class="semaine-right">
+            <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div></div>
+            <div class="chevron">▼</div>
+          </div>
+        </div>
+        <div class="seances-grid">
+          <div class="seance-card">
+            <div class="seance-day">Séance 7</div>
+            <div class="seance-titre">Le partenaire choisit — tu t'adaptes</div>
+            <span class="tbadge tp">Chaos total</span>
+            <div class="sbloc bern">
+              <div class="sbloc-title">Uchi-komi 80 reps — 30 min</div>
+              <ul class="steps">
+                <li>Le partenaire choisit <strong>en secret avant chaque rep</strong> : garde / résistance / position / déplacement</li>
+                <li>Tu ne sais rien à l'avance — réaction pure à chaque fois</li>
+                <li>80 problèmes différents à résoudre — c'est le test de tout ce que le cerveau a appris</li>
+              </ul>
+            </div>
+            <div class="sbloc sys">
+              <div class="sbloc-title">Système d'attaque — 4×3 min</div>
+              <ul class="steps"><li>Randori libre — après 2 semaines de perturbation, observer ce qui sort naturellement</li></ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 8</div>
-            <div class="seance-titre">Retour au mouvement naturel</div>
-            <span class="tbadge tg">Observation</span>
-            <div class="sbloc theme">
-              <div class="sbloc-title">Randori sans contrainte — 30 min</div>
+            <div class="seance-titre">Gaucher intégral en randori</div>
+            <span class="tbadge tp">Chaos total</span>
+            <div class="sbloc bern">
+              <div class="sbloc-title">Randori gaucher complet — 30 min</div>
               <ul class="steps">
-                <li>15 min de randori totalement libre — aucune contrainte imposée</li>
-                <li>Observer : qu'est-ce qui a changé par rapport à la S1 ?</li>
-                <li>Quels mouvements sont plus fluides, plus libres, plus variés ?</li>
-                <li>Le bruit de phase 1 a-t-il enrichi ton judo naturel ?</li>
+                <li><strong>4 × 3 min en gaucher intégral</strong> — aucune technique droitier autorisée</li>
+                <li>L'inconfort extrême crée de nouvelles voies neuronales</li>
+                <li><strong>2 × 3 min en droitier</strong> après — le côté dominant semble plus libre, plus souple</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Identifier ta technique qui est sortie le plus souvent naturellement — elle devient la base de phase 4</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 4×3 min</div>
+              <ul class="steps"><li>Randori normal — noter quelle technique est sortie spontanément sous les contraintes de la semaine</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 9</div>
-            <div class="seance-titre">Bilan — envoi coach</div>
+            <div class="seance-titre">Bilan Phase 1 — envoi coach</div>
             <span class="tbadge tg">Bilan</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Synthèse Phase 1 — 15 min</div>
+              <div class="sbloc-title">Randori libre + observation — 25 min</div>
               <ul class="steps">
-                <li>Identifier les 3 contraintes qui ont le plus perturbé ton mouvement</li>
-                <li>Identifier les 2 nouvelles solutions motrices qui ont émergé</li>
-                <li>Envoyer ce bilan au coach : «Voici ce qui a changé…»</li>
+                <li>15 min de randori totalement libre — aucune contrainte imposée</li>
+                <li>Comparer le ressenti avec S1 : qu'est-ce qui a changé ?</li>
+                <li>Identifier : 3 contraintes qui ont le plus perturbé / 2 nouvelles solutions motrices qui ont émergé</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 25 min</div>
+              <div class="sbloc-title">Système d'attaque — 4×3 min</div>
               <ul class="steps">
-                <li>Randori intensité progressive — appliquer tout sans contrainte</li>
+                <li>Randori intensité — noter quelle technique sort le plus souvent sans intention consciente</li>
+                <li>Envoyer le bilan au coach : «Voici ce qui a changé…»</li>
               </ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 55 min</div>
           </div>
         </div>
       </div>
@@ -642,18 +639,18 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
   <!-- ─── PHASE 2 ─── -->
   <div class="programme-wrapper" id="phase-2">
     <div class="cnote" style="background:#f8f4ff;border-color:#d4c8f0;border-left-color:var(--purple)">
-      <strong style="color:var(--purple)">Phase 2 — Répétition sans Répétition (Nikolai Bernstein)</strong>
-      Bernstein a montré que le système nerveux ne reproduit jamais exactement le même mouvement — et c'est une <em>force</em>, pas un défaut. La répétition sans répétition consiste à <strong>répéter la tâche</strong>, pas le geste. L'objectif reste identique (projeter, déséquilibrer, entrer) mais le chemin moteur varie naturellement à chaque fois parce que le contexte change. On ne dit pas au corps <em>comment</em> varier — on lui présente des problèmes légèrement différents à résoudre. Le geste devient vivant, robuste, imprévisible.
+      <strong style="color:var(--purple)">Phase 2 — Répétition sans Répétition (Bernstein)</strong>
+      On répète la <strong>tâche</strong> (entrer, déséquilibrer, projeter) — jamais le geste. Le contexte change, la variation émerge naturellement. Progression : S4 = contexte mobile simple 40 reps / S5 = contexte imprévisible + tâche abstraite 60 reps / S6 = partenaire choisit tout 100 reps.
     </div>
     <div class="semaine-list">
 
-      <!-- S4 -->
+      <!-- S4 — contexte mobile / 40 reps -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S4</div>
-            <div><div class="semaine-name">La tâche, pas le geste — uchi-komi sur contexte</div>
-            <div class="semaine-meta">Phase 2 · Bernstein — tâche variable · 3 séances</div></div>
+            <div><div class="semaine-name">Contexte mobile — partenaire en mouvement</div>
+            <div class="semaine-meta">Phase 2 · 40 reps/séance · Système 2×3 min</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div><div class="di"></div></div>
@@ -663,78 +660,69 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 10</div>
-            <div class="seance-titre">Uchi-komi sur partenaire en mouvement</div>
+            <div class="seance-titre">Tâche : entrer — partenaire en tsugi ashi</div>
             <span class="tbadge tp">Bernstein</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Tâche : entrer — contexte : jamais fixe — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 40 reps — 25 min</div>
               <ul class="steps">
-                <li><strong>Règle :</strong> le partenaire ne s'arrête jamais — il marche en tsugi ashi continu</li>
-                <li>Toi : répéter ta technique. La tâche est toujours la même. Mais le contexte change à chaque rep (position, vitesse, pas adverse)</li>
-                <li>Le corps est <em>forcé</em> de trouver une solution légèrement différente à chaque fois — c'est la répétition sans répétition</li>
-                <li>× 50 reps minimum — ne pas compter, rester dans la sensation</li>
-                <li><strong>Ne pas corriger le geste</strong> — si quelque chose marche différemment, c'est le cerveau qui résout le problème</li>
+                <li>Le partenaire marche en tsugi ashi <strong>continu</strong> — ne s'arrête jamais</li>
+                <li>Toi : répéter ta technique. La tâche est toujours la même. Le contexte change à chaque rep.</li>
+                <li>Le corps est <em>forcé</em> de s'adapter — c'est la répétition sans répétition</li>
+                <li><strong>Ne pas corriger le geste</strong> — si ça marche différemment, c'est le cerveau qui résout</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori en tsugi ashi continu — l'attaque naît du mouvement, jamais depuis l'arrêt</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 2×3 min</div>
+              <ul class="steps"><li>Randori tsugi ashi continu : attaque naît du mouvement, jamais depuis l'arrêt</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 11</div>
-            <div class="seance-titre">Résistance surprise</div>
+            <div class="seance-titre">Tâche : entrer — résistance surprise</div>
             <span class="tbadge tp">Bernstein</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Tâche : projeter — contexte : résistance inconnue — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 40 reps — 25 min</div>
               <ul class="steps">
-                <li>Partenaire choisit en secret sa résistance <strong>au moment du contact</strong> : 0% / 40% / 70% / 100%</li>
-                <li>Tu ne sais jamais ce qui t'attend — le système nerveux doit lire et s'adapter en temps réel</li>
-                <li>La tâche reste la même (projeter). Le chemin moteur change selon la réponse perçue.</li>
-                <li>× 40 nagekomi dans ces conditions</li>
+                <li>Partenaire choisit sa résistance <strong>au moment du contact</strong> : 0% / 40% / 70% / 100%</li>
+                <li>Tu ne sais jamais ce qui t'attend — le système nerveux lit et s'adapte en temps réel</li>
+                <li>La tâche reste identique. Le chemin moteur change selon la réponse perçue.</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori : attaquer sur la résistance <em>lue</em>, pas sur la résistance <em>attendue</em></li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 2×3 min</div>
+              <ul class="steps"><li>Randori : attaquer sur la résistance <em>lue</em>, pas sur la résistance <em>attendue</em></li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 12</div>
-            <div class="seance-titre">Position de départ aléatoire</div>
+            <div class="seance-titre">Tâche : entrer — position de départ aléatoire</div>
             <span class="tbadge tp">Bernstein</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Tâche : entrer — départ : toujours différent — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 40 reps — 25 min</div>
               <ul class="steps">
-                <li>Le partenaire positionne ses pieds différemment avant chaque rep — écartés / serrés / décalés / croisés</li>
-                <li>Sa garde change : haute / basse / ouverte / fermée — au hasard</li>
+                <li>Partenaire change sa garde avant chaque rep en secret : pieds serrés / écartés / décalés / garde haute / basse</li>
                 <li>Même tâche, même technique — mais le point de départ évolue à chaque fois</li>
-                <li>× 50 uchi-komi — le corps apprend à lire et résoudre en même temps</li>
+                <li>40 problèmes distincts à résoudre : le cerveau apprend à lire avant d'entrer</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori : changer intentionnellement de partenaire toutes les 3 min — s'adapter au nouveau contexte corporel</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 2×3 min</div>
+              <ul class="steps"><li>Randori : changer de partenaire toutes les 3 min — s'adapter au nouveau contexte corporel</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
         </div>
       </div>
 
-      <!-- S5 -->
+      <!-- S5 — contexte imprévisible / tâche abstraite / 60 reps -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S5</div>
-            <div><div class="semaine-name">Répéter la tâche — dans des contextes de combat</div>
-            <div class="semaine-meta">Phase 2 · Bernstein en situation · 3 séances</div></div>
+            <div><div class="semaine-name">Tâche abstraite — déséquilibrer & entrer dans l'espace</div>
+            <div class="semaine-meta">Phase 2 · 60 reps/séance · Système 3×3 min</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div></div>
@@ -744,78 +732,71 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 13</div>
-            <div class="seance-titre">Tâche : déséquilibrer</div>
+            <div class="seance-titre">Tâche : déséquilibrer — pas une technique</div>
             <span class="tbadge tp">Bernstein</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Répéter le kuzushi — pas une technique — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 60 reps tâche abstraite — 30 min</div>
               <ul class="steps">
-                <li>La tâche n'est plus «faire o-soto» — c'est <strong>«déséquilibrer»</strong></li>
-                <li>Répéter la tâche kuzushi × 60 fois — le corps choisit comment à chaque fois</li>
-                <li>Partenaire : résistance et déplacement variés à chaque rep</li>
-                <li>Les techniques émergent naturellement — certaines seront de vraies surprises</li>
-                <li>Bernstein : c'est la tâche qui génère la technique, pas l'inverse</li>
+                <li>La tâche n'est plus «faire o-uchi» — c'est <strong>«déséquilibrer»</strong></li>
+                <li>× 60 reps — le corps choisit comment à chaque fois selon le contexte adverse</li>
+                <li>Partenaire varie ses appuis et déplacements à chaque rep</li>
+                <li>Les techniques qui émergent naturellement sont les tiennes — noter les surprises</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori avec objectif de tâche : «déséquilibrer 10 fois» — peu importe la technique utilisée</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori objectif «déséquilibrer 8 fois» — peu importe la technique</li></ul>
             </div>
             <div class="seance-footer">⏱ 50 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 14</div>
-            <div class="seance-titre">Tâche : entrer dans l'espace libre</div>
+            <div class="seance-titre">Tâche : entrer dans l'espace qui s'ouvre</div>
             <span class="tbadge tp">Bernstein</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Répéter la lecture de l'espace — 30 min</div>
+              <div class="sbloc-title">Uchi-komi 60 reps lecture de l'espace — 30 min</div>
               <ul class="steps">
                 <li>La tâche : <strong>trouver et occuper l'espace libre</strong> créé par le partenaire</li>
-                <li>Partenaire varie ses appuis et sa direction en permanence</li>
-                <li>Toi : entrer dans l'espace qui se présente — ni droit, ni gauche, ni devant : où il y a de la place</li>
-                <li>× 40 entrées — le chemin est toujours différent, la tâche toujours identique</li>
+                <li>Le partenaire varie ses appuis et direction en continu</li>
+                <li>Toi : entrer où il y a de la place — ni droit, ni gauche, ni devant par défaut</li>
+                <li>× 60 entrées — le chemin change, la tâche reste identique</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori : attaquer <em>l'espace qui s'ouvre</em>, pas l'adversaire qui est là</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori : attaquer <em>l'espace qui s'ouvre</em>, pas l'adversaire «en face»</li></ul>
             </div>
             <div class="seance-footer">⏱ 50 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 15</div>
-            <div class="seance-titre">Tâche : créer la projection</div>
+            <div class="seance-titre">Tâche : projeter — chute surprise</div>
             <span class="tbadge tp">Bernstein</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Répéter le nagekomi — contexte vivant — 30 min</div>
+              <div class="sbloc-title">Nagekomi 60 reps contexte vivant — 30 min</div>
               <ul class="steps">
-                <li>× 30 nagekomi — le partenaire varie sa chute : tôt / tard / à gauche / à droite</li>
-                <li>Toi : la tâche est projeter. Le corps adapte la fin du geste à ce que le partenaire donne.</li>
-                <li>× 10 nagekomi en enchaîné — si la 1re ne passe pas, continuer sans s'arrêter</li>
+                <li>× 40 nagekomi — partenaire varie sa chute : tôt / tard / à gauche / à droite</li>
+                <li>Tâche : projeter. Le corps adapte la fin du geste à ce que le partenaire donne.</li>
+                <li>× 20 nagekomi enchaîné — si la 1re ne passe pas, continuer sans s'arrêter</li>
                 <li>La suite naît du contexte — Bernstein pur</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Randori : enchaîner naturellement après chaque premier jet bloqué — ne jamais s'arrêter</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori : enchaîner naturellement après chaque premier jet bloqué — ne jamais s'arrêter</li></ul>
             </div>
             <div class="seance-footer">⏱ 50 min</div>
           </div>
         </div>
       </div>
 
-      <!-- S6 -->
+      <!-- S6 — partenaire choisit tout / 100 reps / bilan -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S6</div>
-            <div><div class="semaine-name">Bilan Phase 2 — le geste est devenu vivant</div>
-            <div class="semaine-meta">Phase 2 · Intégration · 3 séances</div></div>
+            <div><div class="semaine-name">Volume max — partenaire choisit tout + bilan</div>
+            <div class="semaine-meta">Phase 2 · 100 reps/séance · Système 4×3 min · Bilan</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div></div>
@@ -825,53 +806,54 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 16</div>
-            <div class="seance-titre">Tâche libre — partenaire décide tout</div>
+            <div class="seance-titre">100 reps — partenaire décide tout</div>
             <span class="tbadge tp">Bernstein complet</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">Résolution de problème total — 35 min</div>
+              <div class="sbloc-title">100 reps résolution de problème total — 35 min</div>
               <ul class="steps">
-                <li>Le partenaire choisit en secret avant chaque rep : sa position / sa résistance / son déplacement / sa garde</li>
-                <li>Tu ne sais rien à l'avance — la tâche reste toujours «entrer et projeter»</li>
-                <li>100 reps dans ces conditions — le cerveau résout 100 problèmes différents</li>
-                <li>C'est la démonstration de Bernstein : le geste n'existe pas, seule la <em>famille de solutions</em> existe</li>
+                <li>Le partenaire choisit en secret avant chaque rep : position / résistance / déplacement / garde</li>
+                <li>Tu ne sais rien à l'avance — tâche toujours «entrer et projeter»</li>
+                <li>100 problèmes différents — c'est la démonstration Bernstein : la <em>famille de solutions</em> existe, pas le geste figé</li>
               </ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="sbloc sys">
+              <div class="sbloc-title">Système d'attaque — 4×3 min</div>
+              <ul class="steps"><li>Randori libre — observer quelles solutions motrices ton corps a développé en 6 semaines</li></ul>
+            </div>
+            <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 17</div>
             <div class="seance-titre">Randori tâche-objectif</div>
             <span class="tbadge tg">Observation</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Randori sans technique nommée — 30 min</div>
+              <div class="sbloc-title">Randori sans technique nommée — 35 min</div>
               <ul class="steps">
-                <li>Objectif de séance : «projeter 5 fois» — peu importe comment</li>
-                <li>Pas de technique imposée, pas de contrainte — juste la tâche</li>
-                <li>Observer quelles solutions motrices ton corps a développé en 6 semaines</li>
-                <li>Ces solutions sont ton judo — pas celui du manuel</li>
+                <li>Objectif : «projeter 5 fois» — peu importe comment</li>
+                <li>Pas de technique imposée — juste la tâche</li>
+                <li>Ces solutions sont <em>ton judo</em> — pas celui du manuel</li>
+                <li>Identifier la technique qui revient naturellement le plus souvent</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps">
-                <li>Identifier ta technique principale émergée — celle qui revient naturellement</li>
-              </ul>
+              <div class="sbloc-title">Système d'attaque — 4×3 min</div>
+              <ul class="steps"><li>Randori — noter ta technique principale émergée : elle sera la base de la phase 4</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 18</div>
-            <div class="seance-titre">Transition vers Eclosia</div>
+            <div class="seance-titre">Bilan Phase 2 + transition Eclosia</div>
             <span class="tbadge tb">Transition</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Introduction à l'émergence — 25 min</div>
+              <div class="sbloc-title">Randori 2m² + bilan — 30 min</div>
               <ul class="steps">
                 <li>Randori dans 2m² — observer ce que le corps invente pour résoudre l'espace réduit</li>
-                <li>Chaque solution inventée <em>t'appartient</em> — le corps a résolu le problème seul</li>
-                <li>C'est le pont entre Bernstein (tâche → variation) et Eclosia (contrainte → émergence)</li>
+                <li>Chaque solution inventée <em>t'appartient</em> — c'est le pont vers Eclosia</li>
+                <li>Envoyer au coach : ta technique principale + ce qui a changé depuis S4</li>
               </ul>
             </div>
-            <div class="seance-footer">⏱ 40 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
         </div>
       </div>
@@ -883,17 +865,17 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
   <div class="programme-wrapper" id="phase-3">
     <div class="cnote" style="background:#eef6ff;border-color:#b8d4f0;border-left-color:var(--blue)">
       <strong style="color:var(--blue)">Phase 3 — Eclosia + Visualisation</strong>
-      Eclosia : la technique s'impose de la situation, elle n'est pas choisie. On crée des contraintes, et on observe ce que le corps invente pour les résoudre. La visualisation complète le travail physique : le cerveau grave les solutions motrices découvertes sans être sur le tatami. Essentiel pour le coaching en ligne.
+      Eclosia : la technique s'impose de la situation, elle n'est pas choisie. La visualisation grave les solutions découvertes sans tatami. Progression : S7 = contraintes simples + visu 5 min / S8 = contraintes combinées + visu 10 min + arbre / S9 = intensité compétition + séance mentale pure 40 min + bilan.
     </div>
     <div class="semaine-list">
 
-      <!-- S7 -->
+      <!-- S7 — Eclosia simple / visu ancrage 5 min -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S7</div>
-            <div><div class="semaine-name">Contraintes Eclosia — laisser émerger</div>
-            <div class="semaine-meta">Phase 3 · Émergence par contrainte · 3 séances</div></div>
+            <div><div class="semaine-name">Eclosia — contraintes simples + visu ancrage</div>
+            <div class="semaine-meta">Phase 3 · 1 contrainte · Visualisation 5 min · Système 2×3 min</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div><div class="di"></div></div>
@@ -903,92 +885,85 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 19</div>
-            <div class="seance-titre">Contraintes de zone</div>
+            <div class="seance-titre">Contrainte de zone — laisser émerger</div>
             <span class="tbadge tp">Eclosia</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Laisser la technique naître — 25 min</div>
+              <div class="sbloc-title">Contraintes spatiales — 25 min</div>
               <ul class="steps">
-                <li><strong>2m² :</strong> espace réduit → quelles techniques émergent naturellement ?</li>
-                <li><strong>Reculer interdit :</strong> la pression crée son propre mouvement</li>
-                <li><strong>Un pied dans une zone fixe :</strong> l'asymétrie force de nouvelles solutions</li>
+                <li><strong>2m² :</strong> espace réduit → quelles techniques naissent naturellement ?</li>
+                <li><strong>Reculer interdit :</strong> la pression vers l'avant crée son propre mouvement</li>
                 <li>Après chaque contrainte : <em>nommer</em> ce qui est sorti — c'est plus précieux que ce qui est appris</li>
               </ul>
             </div>
             <div class="sbloc visu">
-              <div class="sbloc-title">Visualisation — 10 min</div>
+              <div class="sbloc-title">Visualisation 5 min — ancrage d'1 technique</div>
               <div class="visu-card">
-                <h4>Protocole — graver le mouvement émergé</h4>
+                <h4>Protocole ancrage</h4>
                 <ol class="visu-steps">
-                  <li>Assis, yeux fermés, respiration calme (2 min)</li>
-                  <li>Revivre la technique émergée — en 1re personne, kinesthésique</li>
-                  <li>La rejouer mentalement × 5 — parfaite, fluide, timing juste</li>
-                  <li>La placer dans 3 contextes de combat différents</li>
+                  <li>Yeux fermés, respiration calme (1 min)</li>
+                  <li>Revivre la technique émergée en 1re personne, kinesthésique</li>
+                  <li>La rejouer mentalement × 5 — parfaite, fluide</li>
                 </ol>
               </div>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 10 min</div>
-              <ul class="steps"><li>Intégrer 1 technique émergée dans le randori — la laisser vivre</li></ul>
+              <div class="sbloc-title">Système d'attaque — 2×3 min</div>
+              <ul class="steps"><li>Intégrer la technique émergée dans le randori — la laisser vivre</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 20</div>
-            <div class="seance-titre">Visualisation du système</div>
+            <div class="seance-titre">Visualisation du système — intro</div>
             <span class="tbadge tb">Visualisation</span>
             <div class="sbloc visu">
-              <div class="sbloc-title">Travail mental — 20 min</div>
+              <div class="sbloc-title">Travail mental 15 min + randori</div>
               <div class="visu-card">
-                <h4>Visualisation du système d'attaque complet</h4>
+                <h4>Visualisation système d'attaque — 1re fois</h4>
                 <ol class="visu-steps">
                   <li>Visualiser ton installation à la garde — déplacement, prise trouvée</li>
                   <li>Visualiser l'action-réaction : adversaire tire → entrée instantanée</li>
-                  <li>Visualiser la confusion : feinte → réaction adverse → attaque dans l'ouverture</li>
-                  <li>Visualiser l'enchaînement A→B : 1re attaque bloquée → 2e automatique</li>
-                  <li>Visualiser l'ippon final × 3 — voir la projection complète</li>
+                  <li>Visualiser ta technique principale × 5 — dans 2 contextes différents</li>
                 </ol>
               </div>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 20 min</div>
+              <div class="sbloc-title">Système d'attaque — 2×3 min</div>
               <ul class="steps">
-                <li>Randori immédiatement après la visualisation — comparer les sensations</li>
-                <li>L'écart entre mental et physique = zone précise de travail</li>
+                <li>Randori immédiatement après — comparer les sensations avec ce que tu as visualisé</li>
+                <li>L'écart entre mental et physique = zone de travail</li>
               </ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 21</div>
-            <div class="seance-titre">Contrainte de prise + visualisation</div>
+            <div class="seance-titre">Contrainte de prise + visu</div>
             <span class="tbadge tp">Eclosia</span>
             <div class="sbloc theme">
               <div class="sbloc-title">Contraintes de saisie — 25 min</div>
               <ul class="steps">
                 <li><strong>Prise habituelle interdite</strong> → le corps cherche une nouvelle voie</li>
                 <li><strong>Une seule main</strong> → précision et lecture amplifiées</li>
-                <li><strong>Prise sur ceinture uniquement</strong> → nouvelles sensations de kuzushi</li>
-                <li>Observer : la technique qui émerge avec chaque contrainte de prise</li>
+                <li>Après chaque contrainte : nommer la technique qui émerge</li>
               </ul>
             </div>
             <div class="sbloc visu">
-              <div class="sbloc-title">Visualisation — 8 min</div>
-              <ul class="steps">
-                <li>Visualiser les 3 techniques émergées aujourd'hui × 3 chacune — les graver</li>
-              </ul>
+              <div class="sbloc-title">Visualisation 5 min</div>
+              <ul class="steps"><li>Visualiser les techniques émergées aujourd'hui × 3 chacune — les graver avant la prochaine séance</li></ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 45 min</div>
           </div>
         </div>
       </div>
 
-      <!-- S8 -->
+      <!-- S8 — Eclosia combinée / visu avancée 10 min / arbre -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S8</div>
-            <div><div class="semaine-name">Enchaînements naturels — l'arbre d'attaque</div>
-            <div class="semaine-meta">Phase 3 · Cartographie technique · 3 séances</div></div>
+            <div><div class="semaine-name">Eclosia combinée + visu avancée + arbre d'attaque</div>
+            <div class="semaine-meta">Phase 3 · 2 contraintes · Visualisation 10 min · Système 3×3 min</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div></div>
@@ -1001,21 +976,23 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
             <div class="seance-titre">La suite après l'échec</div>
             <span class="tbadge tp">Eclosia</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Ce qui naît du blocage — 25 min</div>
+              <div class="sbloc-title">Enchaînements naturels — 25 min</div>
               <ul class="steps">
                 <li>Attaquer → partenaire bloque volontairement → <strong>ne pas s'arrêter</strong></li>
-                <li>Observer quelle technique émerge dans le mouvement du blocage</li>
-                <li>Cette technique de suite est la plus authentique — le corps l'a inventée seul</li>
-                <li>× 30 entrées enchaînées dans ces conditions</li>
+                <li>Observer quelle technique émerge dans le mouvement du blocage — elle est plus authentique que n'importe quelle suite apprise</li>
+                <li>× 30 entrées dans ces conditions</li>
               </ul>
             </div>
             <div class="sbloc visu">
-              <div class="sbloc-title">Visualisation — 8 min</div>
-              <ul class="steps"><li>Visualiser l'enchaînement découvert × 10 mentalement — le graver</li></ul>
+              <div class="sbloc-title">Visualisation 10 min</div>
+              <ul class="steps">
+                <li>Visualiser l'enchaînement découvert × 8 mentalement</li>
+                <li>Le placer dans 3 contextes adverses différents</li>
+              </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 12 min</div>
-              <ul class="steps"><li>Randori enchaîné — chaque attaque a une suite. Jamais d'attaque isolée.</li></ul>
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori enchaîné — chaque attaque a une suite, jamais d'attaque isolée</li></ul>
             </div>
             <div class="seance-footer">⏱ 50 min</div>
           </div>
@@ -1028,32 +1005,38 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
               <ul class="steps">
                 <li>Partenaire attaque en randori — répondre sans technique prédéfinie</li>
                 <li>Ne pas choisir : laisser le corps répondre à l'information reçue</li>
-                <li>Observer : quelles contre-attaques reviennent spontanément le plus souvent ?</li>
-                <li>Celles-là sont les vraies — issues de la mécanique du corps, pas d'un choix</li>
+                <li>Quelles contre-attaques reviennent spontanément le plus souvent ? Celles-là sont les vraies.</li>
               </ul>
             </div>
             <div class="sbloc visu">
-              <div class="sbloc-title">Visualisation — 8 min</div>
-              <ul class="steps"><li>Visualiser ta contre-attaque naturelle sur les 3 attaques adverses les plus fréquentes</li></ul>
+              <div class="sbloc-title">Visualisation 10 min</div>
+              <ul class="steps">
+                <li>Visualiser ta contre-attaque naturelle sur les 3 attaques adverses les plus fréquentes</li>
+                <li>Voir l'enchaînement complet : attaque adverse → contre → suite éventuelle</li>
+              </ul>
+            </div>
+            <div class="sbloc sys">
+              <div class="sbloc-title">Système d'attaque — 3×3 min</div>
+              <ul class="steps"><li>Randori : compter tes contre-attaques naturelles — elles entrent dans l'arbre</li></ul>
             </div>
             <div class="seance-footer">⏱ 50 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 24</div>
             <div class="seance-titre">Construire l'arbre d'attaque</div>
-            <span class="tbadge tr">Système</span>
+            <span class="tbadge tr">Arbre</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Cartographie de ton judo — 20 min</div>
+              <div class="sbloc-title">Cartographie — 20 min</div>
               <ul class="steps">
-                <li>Randori 15 min — laisser le judo naturel s'exprimer sans aucune contrainte</li>
-                <li>Après : sur papier, dessiner l'arbre : <strong>technique principale → enchaînement → contre naturel</strong></li>
+                <li>Randori 15 min — laisser le judo naturel s'exprimer sans contrainte</li>
+                <li>Sur papier : <strong>technique principale → enchaînement → contre naturel</strong></li>
                 <li>Ce n'est pas choisi — c'est observé. C'est ton judo.</li>
               </ul>
             </div>
             <div class="sbloc visu">
-              <div class="sbloc-title">Visualisation — 10 min</div>
+              <div class="sbloc-title">Visualisation 10 min — arbre complet</div>
               <ul class="steps">
-                <li>Visualiser l'arbre complet dans l'ordre : installation → attaque → enchaînement → contre</li>
+                <li>Visualiser l'arbre dans l'ordre : installation → attaque → enchaînement → contre</li>
                 <li>Envoyer l'arbre dessiné au coach</li>
               </ul>
             </div>
@@ -1062,13 +1045,13 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         </div>
       </div>
 
-      <!-- S9 -->
+      <!-- S9 — intensité compétition / séance mentale 40 min / bilan -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S9</div>
-            <div><div class="semaine-name">Consolidation — bilan 9 semaines</div>
-            <div class="semaine-meta">Phase 3 · Synthèse · 3 séances</div></div>
+            <div><div class="semaine-name">Intensité compétition + séance mentale pure + bilan</div>
+            <div class="semaine-meta">Phase 3 · 5×3 min compétition · Visu 40 min · Bilan 9 semaines</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div></div>
@@ -1078,31 +1061,31 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 25</div>
-            <div class="seance-titre">Intensité compétition</div>
+            <div class="seance-titre">Simulation compétition — 5×3 min</div>
             <span class="tbadge tr">Intensité</span>
             <div class="sbloc sys">
-              <div class="sbloc-title">Simulation compétition — 35 min</div>
+              <div class="sbloc-title">Randori compétition — 35 min</div>
               <ul class="steps">
                 <li>5 × 3 min intensité maximale — appliquer tout ce qui a émergé</li>
-                <li>Avant chaque échange : 30 sec de visualisation rapide du système</li>
-                <li>Le système tient-il sous pression ?</li>
+                <li>Visualisation 30 sec avant chaque échange — activer le système</li>
+                <li>Le système tient-il sous pression ? Quels piliers lâchent ?</li>
               </ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 26</div>
-            <div class="seance-titre">Séance mentale pure</div>
+            <div class="seance-titre">Séance mentale pure — 40 min</div>
             <span class="tbadge tb">Visualisation</span>
             <div class="sbloc visu">
               <div class="sbloc-title">40 min de travail mental — sans tatami</div>
               <div class="visu-card">
                 <h4>Protocole séance mentale complète</h4>
                 <ol class="visu-steps">
-                  <li><strong>10 min :</strong> Visualiser un combat idéal complet — du bowing à l'ippon final</li>
-                  <li><strong>10 min :</strong> Visualiser 3 situations d'échec — ton système les résout</li>
-                  <li><strong>10 min :</strong> Ton installation à la garde contre 3 styles adverses</li>
-                  <li><strong>10 min :</strong> Ta technique signature × 20 — dans des contextes variés</li>
+                  <li><strong>10 min :</strong> Un combat idéal complet — du bowing à l'ippon final</li>
+                  <li><strong>10 min :</strong> 3 situations d'échec — ton système les résout à chaque fois</li>
+                  <li><strong>10 min :</strong> Ton installation contre 3 styles adverses différents</li>
+                  <li><strong>10 min :</strong> Ta technique signature × 15 — dans des contextes variés</li>
                 </ol>
               </div>
             </div>
@@ -1113,19 +1096,14 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
             <div class="seance-titre">Bilan 9 semaines — envoi coach</div>
             <span class="tbadge tg">Bilan</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Synthèse — 15 min</div>
+              <div class="sbloc-title">Synthèse + randori libre — 30 min</div>
               <ul class="steps">
-                <li>Rédiger et envoyer au coach : ton arbre d'attaque / ce qui a changé / les 3 grandes découvertes</li>
+                <li>Randori 20 min libre — ton judo sans aucune contrainte — mesurer le chemin depuis S1</li>
+                <li>Rédiger et envoyer au coach : ton arbre / 3 grandes découvertes / ce qui reste difficile</li>
                 <li>Le coach affine le programme de phase 4 en fonction</li>
               </ul>
             </div>
-            <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 30 min</div>
-              <ul class="steps">
-                <li>Randori libre — ton judo, sans contrainte — mesurer le chemin parcouru depuis S1</li>
-              </ul>
-            </div>
-            <div class="seance-footer">⏱ 55 min</div>
+            <div class="seance-footer">⏱ 50 min</div>
           </div>
         </div>
       </div>
@@ -1137,17 +1115,17 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
   <div class="programme-wrapper" id="phase-4">
     <div class="cnote" style="background:#fff5f5;border-color:#f5c8c8;border-left-color:var(--red)">
       <strong style="color:var(--red)">Phase 4 — Système d'Attaque (5 piliers)</strong>
-      Tout ce qui a émergé en phases 1-3 prend maintenant une forme claire et entraînable. Les 5 piliers du système : installation à la garde, attaque principale, action-réaction, confusion, enchaînement. On travaille chaque pilier séparément puis on fusionne tout.
+      Ce qui a émergé en phases 1-3 prend maintenant une forme structurée. Progression : S10 = piliers 1+2 (installation + signature 100-150 reps) / S11 = piliers 3+4+5 (action-réaction, confusion, enchaînement, drills ciblés) / S12 = tous les piliers sous pression maximale + 200 reps Bernstein final.
     </div>
     <div class="semaine-list">
 
-      <!-- S10 -->
+      <!-- S10 — piliers 1 & 2 -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S10</div>
-            <div><div class="semaine-name">Piliers 1 & 2 — Garde + Attaque principale</div>
-            <div class="semaine-meta">Phase 4 · Système · 3 séances</div></div>
+            <div><div class="semaine-name">Piliers 1 & 2 — Installation + Attaque signature</div>
+            <div class="semaine-meta">Phase 4 · 100-150 reps · Système piliers 1+2</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di"></div></div>
@@ -1157,69 +1135,69 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 28</div>
-            <div class="seance-titre">S'installer à la garde</div>
+            <div class="seance-titre">Pilier 1 — Maîtriser l'installation</div>
             <span class="tbadge tr">Pilier 1</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">4 façons de s'installer — 25 min</div>
+              <div class="sbloc-title">4 méthodes d'installation × 100 — 25 min</div>
               <ul class="steps">
-                <li><strong>Directe :</strong> entrer dans la prise sans négociation — assumer sa garde</li>
-                <li><strong>Par le mouvement :</strong> avancer, partenaire recule → prendre la prise dans le pas</li>
-                <li><strong>Par la surprise :</strong> fausse attaque → dans la réaction adverse, installer la prise</li>
-                <li><strong>En gaucher :</strong> pour forcer kenka yotsu et créer l'espace libre</li>
-                <li>Bernstein : avant chaque uchi-komi, s'installer différemment</li>
+                <li><strong>Directe :</strong> entrer sans négociation — assumer sa garde × 25</li>
+                <li><strong>Par le mouvement :</strong> avancer, partenaire recule → prise dans le pas × 25</li>
+                <li><strong>Par la surprise :</strong> fausse attaque → installer dans la réaction × 25</li>
+                <li><strong>En gaucher :</strong> forcer kenka yotsu pour créer l'espace × 25</li>
               </ul>
             </div>
             <div class="sbloc visu">
               <div class="sbloc-title">Visualisation — 5 min</div>
-              <ul class="steps"><li>Visualiser ton installation parfaite × 10 — rapide, naturelle, dominante</li></ul>
+              <ul class="steps"><li>Visualiser les 4 installations parfaites × 3 chacune — rapides, naturelles, dominantes</li></ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 20 min</div>
+              <div class="sbloc-title">Système d'attaque pilier 1 — 20 min</div>
               <ul class="steps"><li>Randori : l'attaque ne commence que depuis ta garde installée — jamais dans l'inconfort de prise</li></ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 29</div>
-            <div class="seance-titre">Technique signature × 150</div>
+            <div class="seance-titre">Pilier 2 — Signature Bernstein × 150</div>
             <span class="tbadge tr">Pilier 2</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">150 reps Bernstein de ta signature — 30 min</div>
+              <div class="sbloc-title">150 reps ta technique — contexte vivant — 30 min</div>
               <ul class="steps">
-                <li>× 150 ta technique principale — partenaire en mouvement, résistance variable</li>
-                <li>La tâche est identique. Le contexte change à chaque rep. La variation est naturelle.</li>
+                <li>× 150 ta signature — partenaire en mouvement, résistance variable à chaque rep</li>
+                <li>La tâche est identique. Le contexte change. La variation est naturelle.</li>
                 <li>Gaucher × 15, 1 main × 10 — pour enrichir la famille de solutions</li>
               </ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 15 min</div>
+              <div class="sbloc-title">Système d'attaque pilier 2 — 15 min</div>
               <ul class="steps"><li>Randori : ta signature uniquement — dans toutes les situations qui se présentent</li></ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 30</div>
-            <div class="seance-titre">Piliers 1+2 ensemble</div>
+            <div class="seance-titre">Piliers 1 + 2 ensemble</div>
             <span class="tbadge tr">Intégration</span>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 35 min</div>
+              <div class="sbloc-title">Système piliers 1+2 — 40 min</div>
               <ul class="steps">
-                <li>5 × 3 min — installation (pilier 1) → signature (pilier 2) : mesurer la fluidité du lien</li>
+                <li>5 × 3 min — installation (P1) → signature (P2) : mesurer la fluidité du lien</li>
                 <li>Visualisation 30 sec avant chaque échange</li>
+                <li>L'installation crée-t-elle naturellement l'opportunité d'attaque ?</li>
               </ul>
             </div>
-            <div class="seance-footer">⏱ 50 min</div>
+            <div class="seance-footer">⏱ 55 min</div>
           </div>
         </div>
       </div>
 
-      <!-- S11 -->
+      <!-- S11 — piliers 3, 4, 5 -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S11</div>
-            <div><div class="semaine-name">Piliers 3, 4 & 5 — Action-Réaction, Confusion, Enchaînement</div>
-            <div class="semaine-meta">Phase 4 · Système complet · 3 séances</div></div>
+            <div><div class="semaine-name">Piliers 3, 4 & 5 — Réaction, Confusion, Enchaînement</div>
+            <div class="semaine-meta">Phase 4 · Drills ciblés par pilier · Système partiel puis complet</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div></div>
@@ -1234,20 +1212,20 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
             <div class="sbloc theme">
               <div class="sbloc-title">Réponse avant la décision — 30 min</div>
               <ul class="steps">
-                <li>Partenaire pousse → entrer dans la poussée — immédiatement, sans réfléchir</li>
-                <li>Partenaire tire → entrer dans le tiré — immédiatement</li>
-                <li>Partenaire attaque → contre automatique</li>
-                <li><strong>Règle :</strong> la réponse doit partir avant que le cerveau «décide» — si tu penses, c'est trop tard</li>
-                <li>Bernstein : chaque réaction utilise la solution que le contexte impose naturellement</li>
+                <li>Poussée → entrée dans la poussée × 30 (immédiat, sans réfléchir)</li>
+                <li>Tirage → entrée dans le tiré × 30</li>
+                <li>Attaque adverse → contre automatique × 20</li>
+                <li>Bernstein : chaque réponse utilise la solution que le contexte impose naturellement</li>
+                <li><strong>Règle :</strong> si tu penses à ce que tu vas faire — c'est déjà trop tard</li>
               </ul>
             </div>
             <div class="sbloc visu">
               <div class="sbloc-title">Visualisation — 5 min</div>
-              <ul class="steps"><li>Visualiser tes 3 meilleures réactions automatiques</li></ul>
+              <ul class="steps"><li>Visualiser tes 3 meilleures réactions automatiques × 5 chacune</li></ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 15 min</div>
-              <ul class="steps"><li>Randori : attaquer uniquement en réponse à une action adverse — zéro attaque «décidée»</li></ul>
+              <div class="sbloc-title">Système d'attaque pilier 3 — 15 min</div>
+              <ul class="steps"><li>Randori : attaquer uniquement en réponse à une action adverse — zéro attaque décidée</li></ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
@@ -1256,35 +1234,34 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
             <div class="seance-titre">Pilier 4 — Confusion</div>
             <span class="tbadge tr">Pilier 4</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Créer l'incertitude adverse — 30 min</div>
+              <div class="sbloc-title">4 outils de confusion × 30 chacun — 30 min</div>
               <ul class="steps">
-                <li><strong>Feinte de direction :</strong> montrer droite, entrer gauche</li>
-                <li><strong>Fausse attaque :</strong> entrée à 50% → stop → attaque réelle dans la réaction</li>
-                <li><strong>Rythme 2+1 :</strong> deux entrées lentes → une explosive (pattern qui piège)</li>
-                <li><strong>Changement de niveau :</strong> menacer le bas → attaquer le haut</li>
-                <li>Bernstein : varier la confusion utilisée à chaque rep</li>
+                <li><strong>Feinte de direction</strong> : montrer droite, entrer gauche × 30</li>
+                <li><strong>Fausse attaque</strong> : 50% → stop → attaque réelle dans la réaction × 30</li>
+                <li><strong>Rythme 2+1</strong> : deux lentes → une explosive × 30</li>
+                <li><strong>Changement de niveau</strong> : menacer le bas → attaquer le haut × 30</li>
               </ul>
             </div>
             <div class="sbloc visu">
               <div class="sbloc-title">Visualisation — 5 min</div>
-              <ul class="steps"><li>Visualiser ta feinte + ton attaque dans la fenêtre créée × 10</li></ul>
+              <ul class="steps"><li>Visualiser ta feinte préférée + attaque dans la fenêtre créée × 8</li></ul>
             </div>
             <div class="sbloc sys">
-              <div class="sbloc-title">Système d'attaque — 15 min</div>
+              <div class="sbloc-title">Système d'attaque pilier 4 — 15 min</div>
               <ul class="steps"><li>Randori : toute attaque précédée d'une confusion — mesurer l'ouverture créée</li></ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 33</div>
-            <div class="seance-titre">Pilier 5 — Enchaînement</div>
+            <div class="seance-titre">Pilier 5 — Enchaînement A→B→C</div>
             <span class="tbadge tr">Pilier 5</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">L'arbre complet — 30 min</div>
+              <div class="sbloc-title">L'arbre en action — 30 min</div>
               <ul class="steps">
-                <li>Nagekomi enchaîné : A → B (sur blocage) → C (Eclosia — ce qui émerge) × 30</li>
+                <li>Nagekomi enchaîné : A → B (si A bloqué) → C (Eclosia — émerge) × 30</li>
                 <li>Visualiser l'arbre avant chaque série</li>
-                <li>Ne jamais prédéterminer C — le laisser naître du mouvement</li>
+                <li><strong>C n'est jamais prédéterminé</strong> — le laisser naître du mouvement</li>
               </ul>
             </div>
             <div class="sbloc sys">
@@ -1296,13 +1273,13 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         </div>
       </div>
 
-      <!-- S12 -->
+      <!-- S12 — tous les piliers / pression max / 200 reps / bilan -->
       <div class="semaine-item">
         <div class="semaine-header" onclick="tog(this)">
           <div class="semaine-left">
             <div class="semaine-badge">S12</div>
-            <div><div class="semaine-name">Semaine finale — Ton Judo complet</div>
-            <div class="semaine-meta">Phase 4 · Bilan 12 semaines · 3 séances</div></div>
+            <div><div class="semaine-name">Tous les piliers — pression maximale + Bilan final</div>
+            <div class="semaine-meta">Phase 4 · 200 reps Bernstein · 6×4 min compétition · Bilan 12 semaines</div></div>
           </div>
           <div class="semaine-right">
             <div class="dots5"><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div><div class="di on"></div></div>
@@ -1312,47 +1289,48 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
         <div class="seances-grid">
           <div class="seance-card">
             <div class="seance-day">Séance 34</div>
-            <div class="seance-titre">Système sous pression maximale</div>
+            <div class="seance-titre">Système sous pression maximale — 6×4 min</div>
             <span class="tbadge tr">Peak</span>
             <div class="sbloc sys">
               <div class="sbloc-title">Randori compétition — 40 min</div>
               <ul class="steps">
-                <li>6 × 4 min — les meilleurs partenaires disponibles</li>
-                <li>Visualisation 1 min avant chaque échange</li>
-                <li>Tous les 5 piliers actifs en permanence</li>
+                <li><strong>6 × 4 min</strong> — les meilleurs partenaires disponibles</li>
+                <li>Visualisation 1 min avant chaque échange — activer les 5 piliers</li>
+                <li>Tous les piliers actifs en simultané : quel pilier tient le mieux ?</li>
               </ul>
             </div>
             <div class="seance-footer">⏱ 60 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 35</div>
-            <div class="seance-titre">Bernstein final</div>
-            <span class="tbadge tp">Bernstein</span>
+            <div class="seance-titre">200 uchi-komi Bernstein — le geste final</div>
+            <span class="tbadge tp">Bernstein final</span>
             <div class="sbloc bern">
-              <div class="sbloc-title">200 uchi-komi — partenaire décide tout — 35 min</div>
+              <div class="sbloc-title">200 reps — partenaire choisit tout — 35 min</div>
               <ul class="steps">
                 <li>Après 12 semaines, le partenaire choisit tout à chaque rep — position, résistance, déplacement</li>
-                <li>Observer la différence avec S1 : le geste est vivant, adaptatif, non figé</li>
-                <li>C'est ça la répétition sans répétition de Bernstein</li>
+                <li>Observer la différence avec S1 : le geste est vivant, adaptatif, jamais figé</li>
+                <li>C'est la démonstration finale de Bernstein — la famille de solutions s'est construite</li>
               </ul>
             </div>
             <div class="seance-footer">⏱ 55 min</div>
           </div>
           <div class="seance-card">
             <div class="seance-day">Séance 36</div>
-            <div class="seance-titre">Bilan final — 12 semaines</div>
+            <div class="seance-titre">Bilan 12 semaines — ton judo</div>
             <span class="tbadge tg">Bilan Final</span>
             <div class="sbloc theme">
-              <div class="sbloc-title">Randori libre — ton judo — 25 min</div>
+              <div class="sbloc-title">Randori libre + bilan — 30 min</div>
               <ul class="steps">
-                <li>Sans aucune contrainte — exprimer tout ce qui a été construit</li>
-                <li>Envoyer au coach : ton système complet / les 3 grandes découvertes / la suite</li>
+                <li>Randori libre 20 min — ton judo, sans aucune contrainte</li>
+                <li>Envoyer au coach : système complet / 3 grandes découvertes / suite à 12 semaines</li>
               </ul>
             </div>
             <div class="sbloc visu">
-              <div class="sbloc-title">Visualisation — 10 min</div>
+              <div class="sbloc-title">Visualisation finale — 10 min</div>
               <ul class="steps">
                 <li>Visualiser ton arbre d'attaque final — complet, fluide, le tien</li>
+                <li>Tu l'as construit sur 12 semaines. Il t'appartient.</li>
               </ul>
             </div>
             <div class="seance-footer">⏱ 60 min</div>
@@ -1362,7 +1340,6 @@ footer { border-top:2px solid var(--dim); text-align:center; padding:2rem; color
 
     </div>
   </div><!-- /phase-4 -->
-
 </div><!-- /tab-programme -->
 
 <!-- ══════════════════════════════════════════
